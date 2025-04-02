@@ -1,35 +1,35 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Image from "next/image"
-import { motion } from "framer-motion"
-import { ExternalLink, Github, Maximize2, X } from "lucide-react"
+import { useState } from "react";
+import Image from "next/image";
+import { motion } from "framer-motion";
+import { ExternalLink, Github, Maximize2, X } from "lucide-react";
 
 export default function Projects() {
-  const [selectedProject, setSelectedProject] = useState(null)
+  const [selectedProject, setSelectedProject] = useState(null);
 
   const projects = [
     {
       id: 1,
-      title: "E-Commerce Platform",
+      title: "Culture Capsule",
       description:
-        "A full-featured e-commerce platform built with Next.js and Tailwind CSS. Features include product listings, cart functionality, user authentication, and payment processing.",
+        "Culture Capsule is a digital platform designed to document and share the rich cultural heritage of Northern Cyprus. Built with Next.js and Tailwind CSS.",
       image: "/placeholder.svg?height=600&width=800",
-      tags: ["Next.js", "React", "Tailwind CSS", "Stripe"],
+      tags: ["Vite", "React", "Tailwind CSS", "Shadcn UI", "TypeScript"],
       liveUrl: "https://example.com",
-      githubUrl: "https://github.com",
+      githubUrl: "https://github.com/callmestiles/culture-capsule-frontend-fix",
       details:
-        "This project was built to demonstrate my ability to create complex, interactive web applications. It includes features like product filtering, search functionality, user accounts, and a complete checkout process with Stripe integration.",
+        "This project was built to demonstrate my ability to create complex, interactive web applications. It includes features like product filtering, search functionality, user accounts and authentication, and a responsive design that works on all devices. The project was built using Next.js, Tailwind CSS, and Shadcn UI.",
     },
     {
       id: 2,
-      title: "Portfolio Website",
+      title: "Fufu App",
       description:
-        "A sleek, animated portfolio website built with React and Framer Motion. Features smooth animations, responsive design, and a contact form.",
+        "The home page of job board application that allows users to search for jobs, save favorites, and apply directly through the platform. Built with React",
       image: "/placeholder.svg?height=600&width=800",
-      tags: ["React", "Framer Motion", "Tailwind CSS"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com",
+      tags: ["React", "Vite", "AOS"],
+      liveUrl: "https://www.tryfufu.com/",
+      githubUrl: "https://github.com/IndigoSoftwares21/fufu_app_waitlist",
       details:
         "This portfolio website showcases my skills and projects in an interactive and visually appealing way. It features smooth page transitions, animated UI elements, and a fully responsive design that works on all devices.",
     },
@@ -81,7 +81,7 @@ export default function Projects() {
       details:
         "This fitness tracker helps users monitor their workout progress and achieve their fitness goals. It includes features like workout logging, progress charts, and goal setting.",
     },
-  ]
+  ];
 
   const container = {
     hidden: { opacity: 0 },
@@ -91,12 +91,12 @@ export default function Projects() {
         staggerChildren: 0.1,
       },
     },
-  }
+  };
 
   const item = {
     hidden: { opacity: 0, y: 20 },
     show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-  }
+  };
 
   return (
     <section id="projects" className="py-20 bg-black">
@@ -111,8 +111,9 @@ export default function Projects() {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">My Projects</h2>
           <div className="w-20 h-1 bg-emerald-500 mx-auto mb-6"></div>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            Here are some of my recent projects. Each project reflects my passion for creating intuitive, responsive,
-            and visually appealing web applications.
+            Here are some of my recent projects. Each project reflects my
+            passion for creating intuitive, responsive, and visually appealing
+            web applications.
           </p>
         </motion.div>
 
@@ -172,10 +173,15 @@ export default function Projects() {
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                <p className="text-gray-400 mb-4 line-clamp-3">{project.description}</p>
+                <p className="text-gray-400 mb-4 line-clamp-3">
+                  {project.description}
+                </p>
                 <div className="flex flex-wrap gap-2 mt-4">
                   {project.tags.map((tag) => (
-                    <span key={tag} className="px-2 py-1 bg-emerald-500/10 text-emerald-400 rounded-full text-xs">
+                    <span
+                      key={tag}
+                      className="px-2 py-1 bg-emerald-500/10 text-emerald-400 rounded-full text-xs"
+                    >
                       {tag}
                     </span>
                   ))}
@@ -210,15 +216,22 @@ export default function Projects() {
               </button>
             </div>
             <div className="p-6">
-              <h3 className="text-2xl font-bold mb-2">{selectedProject.title}</h3>
+              <h3 className="text-2xl font-bold mb-2">
+                {selectedProject.title}
+              </h3>
               <div className="flex flex-wrap gap-2 mb-4">
                 {selectedProject.tags.map((tag) => (
-                  <span key={tag} className="px-3 py-1 bg-emerald-500/10 text-emerald-400 rounded-full text-sm">
+                  <span
+                    key={tag}
+                    className="px-3 py-1 bg-emerald-500/10 text-emerald-400 rounded-full text-sm"
+                  >
                     {tag}
                   </span>
                 ))}
               </div>
-              <p className="text-gray-300 mb-6">{selectedProject.details || selectedProject.description}</p>
+              <p className="text-gray-300 mb-6">
+                {selectedProject.details || selectedProject.description}
+              </p>
               <div className="flex space-x-4">
                 <a
                   href={selectedProject.liveUrl}
@@ -244,6 +257,5 @@ export default function Projects() {
         </div>
       )}
     </section>
-  )
+  );
 }
-

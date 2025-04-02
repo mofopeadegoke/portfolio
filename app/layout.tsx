@@ -14,9 +14,9 @@ const inter = Poppins({
 });
 
 export const metadata = {
-  title: "John Doe | Frontend Developer",
+  title: "Daniel Adegoke | Fullstack Developer",
   description:
-    "Portfolio website of John Doe, a frontend developer specializing in modern web technologies.",
+    "Portfolio website of Daniel Adegoke, a fullstack developer specializing in modern web technologies.",
   generator: "v0.dev",
 };
 
