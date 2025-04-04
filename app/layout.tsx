@@ -27,6 +27,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <link
+        rel="shortcut icon"
+        href="/mofopeAvatarOpen.png"
+        type="image/x-icon"
+      />
       <body className={`${inter.className} antialiased`}>
         <ThemeProvider
           attribute="class"

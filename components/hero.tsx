@@ -48,7 +48,7 @@ export default function Hero() {
 
           <div className="flex space-x-4">
             <a
-              href="https://github.com"
+              href="https://github.com/mofopeadegoke"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-emerald-400 transition-colors"
@@ -57,7 +57,7 @@ export default function Hero() {
               <span className="sr-only">GitHub</span>
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/mofopefoluwa-daniel-adegoke-abc/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-emerald-400 transition-colors"
@@ -83,10 +83,13 @@ export default function Hero() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="order-1 md:order-2 flex justify-center"
         >
-          <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-emerald-500/30">
+          <div
+            className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-emerald-500/30"
+            id="heroImgContainer"
+          >
             <Image
-              src="/placeholder.svg?height=320&width=320"
-              alt="John Doe"
+              src="/mofopeAvatarOpen.png"
+              alt="Mofope Adegoke"
               fill
               className="object-cover"
               priority

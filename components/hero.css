@@ -16,3 +16,7 @@
     filter: blur(9rem);
     z-index: -1;
 }
+#heroImgContainer {
+    width: 25rem;
+    height: 25rem;
+}
