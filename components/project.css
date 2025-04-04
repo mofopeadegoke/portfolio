@@ -1,0 +1,22 @@
+.projectList {
+    position: relative;
+    z-index: 3;
+}
+
+.projectList * {
+    z-index: 3;
+}
+
+.projectList::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 60%;
+    background-color: rgba(16, 185, 129, 0.4);
+    filter: blur(10rem);
+    z-index: -1;
+}

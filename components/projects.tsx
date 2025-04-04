@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { ExternalLink, Github, Maximize2, X } from "lucide-react";
+import "./project.css"; // Import your CSS file for custom styles
 
 export default function Projects() {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -35,51 +36,54 @@ export default function Projects() {
     },
     {
       id: 3,
-      title: "Task Management App",
+      title: "Organick",
       description:
-        "A drag-and-drop task management application inspired by Trello. Built with React and includes features like task boards, lists, and cards.",
+        "Organick is a full-featured web application that connects local farmers directly with consumers, promoting access to fresh, organic produce while supporting sustainable agriculture.",
       image: "/placeholder.svg?height=600&width=800",
-      tags: ["React", "Redux", "DnD", "Firebase"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com",
+      tags: ["React", "Node.js", "CSS", "JavaScript"],
+      liveUrl: "https://tech-space-project-organik.vercel.app/",
+      githubUrl: "https://github.com/mofopeadegoke/TechSpace-Project-Organik",
       details:
-        "This task management app allows users to create boards, lists, and cards to organize their tasks. It includes features like drag-and-drop functionality, user authentication, and real-time updates using Firebase.",
+        "Organick is a full-featured web application that connects local farmers directly with consumers, promoting access to fresh, organic produce while supporting sustainable agriculture. It empowers farmers to list their products and customers to browse, order, and purchase goods directly from the source. Organick aims to bridge the gap between local producers and health-conscious consumers. By cutting out the middleman, the platform encourages fair pricing for farmers and fresh produce for customers, fostering a more sustainable and community-driven food ecosystem.",
     },
     {
       id: 4,
-      title: "Weather Dashboard",
+      title: "Attendance System",
       description:
-        "A weather dashboard that displays current weather conditions and forecasts for any location. Built with React and uses the OpenWeather API.",
+        "This Attendance System is a secure and efficient web application designed to allow users (such as employees, students, or team members) to sign in only during designated time slots on specific days of the week.",
       image: "/placeholder.svg?height=600&width=800",
-      tags: ["React", "API", "Chart.js"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com",
+      tags: ["React", "Node.js", "CSS", "JavaScript"],
+      liveUrl: "https://prayer-tower-attendance-system.vercel.app/",
+      githubUrl:
+        "https://github.com/mofopeadegoke/Prayer-Tower-Attendance-System",
       details:
-        "This weather dashboard provides users with current weather conditions and a 5-day forecast for any location. It includes features like location search, temperature charts, and weather maps.",
+        "This Attendance System is a secure and efficient web application designed to allow users (such as employees, students, or team members) to sign in only during designated time slots on specific days of the week. It ensures accurate attendance tracking while enforcing schedule compliance. This app is ideal for schools, remote teams, or workplaces that require strict attendance timing without manual tracking. It prevents late or early sign-ins and helps automate reporting while maintaining integrity.",
     },
     {
       id: 5,
-      title: "Recipe Finder",
+      title: "Inscribe",
       description:
-        "A recipe finder application that allows users to search for recipes based on ingredients, dietary restrictions, and meal types.",
+        "Inscribe is a powerful and lightweight browser extension that allows users to take quick, context-aware notes while browsing the web. Designed for productivity enthusiasts, students, and researchers, Inscribe helps users capture ideas, summarize content, and organize information without leaving the current tab.",
       image: "/placeholder.svg?height=600&width=800",
-      tags: ["React", "API", "Styled Components"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com",
+      tags: ["HTML", "JavaScript", "CSS", "Extension APIs"],
+      liveUrl:
+        "https://microsoftedge.microsoft.com/addons/detail/inscribe/gcobiohplbeljjficipnjpdbpkldkiih",
+      githubUrl: "https://github.com/mofopeadegoke",
       details:
-        "This recipe finder app helps users discover new recipes based on their preferences. It includes features like ingredient search, dietary filters, and the ability to save favorite recipes.",
+        "Inscribe is a powerful and lightweight browser extension that allows users to take quick, context-aware notes while browsing the web. Designed for productivity enthusiasts, students, and researchers, Inscribe helps users capture ideas, summarize content, and organize information without leaving the current tab. Inscribe enhances online productivity by reducing context switching between browser tabs and external note apps. It’s ideal for learners, content curators, and knowledge workers who need to capture and revisit thoughts quickly while browsing",
     },
     {
       id: 6,
-      title: "Fitness Tracker",
+      title: "Modi-Fier",
       description:
-        "A fitness tracking application that allows users to log workouts, track progress, and set fitness goals.",
+        "Modi-Fier is a smart and customizable browser extension that allows users to modify, personalize, and enhance webpages in real time. It's designed for developers, designers, and power users who want more control over how they view and interact with websites.",
       image: "/placeholder.svg?height=600&width=800",
-      tags: ["React", "Chart.js", "Firebase"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com",
+      tags: ["HTML", "JavaScript", "CSS", "Extension APIs"],
+      liveUrl:
+        "https://microsoftedge.microsoft.com/addons/detail/modifier/fbepgnjhifelpmpndoohipnmnmooohhl",
+      githubUrl: "https://github.com/mofopeadegoke/ModiFier1.1",
       details:
-        "This fitness tracker helps users monitor their workout progress and achieve their fitness goals. It includes features like workout logging, progress charts, and goal setting.",
+        "Modi-Fier makes the web more personal and flexible, empowering users to take control of how they consume content. Whether for serious design work or playful experimentation, it brings a hands-on approach to web customization.",
     },
   ];
 
@@ -122,7 +126,7 @@ export default function Projects() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 projectList"
         >
           {projects.map((project) => (
             <motion.div
