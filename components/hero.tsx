@@ -23,9 +23,9 @@ export default function Hero() {
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-4">
             Daniel Adegoke
           </h1>
-          <h3 className="text-2xl md:text-3xl text-gray-300 mb-6">
+          <h2 className="text-2xl md:text-3xl text-gray-300 mb-6">
             Frontend Developer
-          </h3>
+          </h2>
           <p className="text-gray-400 max-w-lg mb-8">
             I craft responsive websites where technology meets creativity.
             Transforming ideas into digital experiences is my passion.
