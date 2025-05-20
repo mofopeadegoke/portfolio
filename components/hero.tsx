@@ -19,7 +19,7 @@ export default function Hero() {
           transition={{ duration: 0.5 }}
           className="order-2 md:order-1 heroLeft"
         >
-          {/* To be checked after, h2 used here migh taffect accessibility */}
+          {/* To be checked after, h2 used here might affect accessibility */}
           <h2 className="text-emerald-400 font-medium mb-2">Hello, I'm</h2>
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-4">
             Daniel Adegoke
