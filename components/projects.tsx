@@ -6,6 +6,8 @@ import { motion } from "framer-motion";
 import cultureCapsule from "@/public/culCap.png";
 import fufuImg from "@/public/fufu.png";
 import organickImg from "@/public/organick.png";
+import inscribeImg from "@/public/inscribe.png";
+import ptImg from "@/public/pt.png";
 import { ExternalLink, Github, Maximize2, X } from "lucide-react";
 import "./project.css"; // Import your CSS file for custom styles
 
@@ -65,7 +67,7 @@ export default function Projects() {
       title: "Attendance System",
       description:
         "This Attendance System is a secure and efficient web application designed to allow users (such as employees, students, or team members) to sign in only during designated time slots on specific days of the week.",
-      image: "/placeholder.svg?height=600&width=800",
+      image: ptImg,
       tags: ["React", "Node.js", "CSS", "JavaScript"],
       liveUrl: "https://prayer-tower-attendance-system.vercel.app/",
       githubUrl:
@@ -78,10 +80,9 @@ export default function Projects() {
       title: "Inscribe",
       description:
         "Inscribe is a powerful and lightweight browser extension that allows users to take quick, context-aware notes while browsing the web. Designed for productivity enthusiasts, students, and researchers, Inscribe helps users capture ideas, summarize content, and organize information without leaving the current tab.",
-      image: "/placeholder.svg?height=600&width=800",
+      image: inscribeImg,
       tags: ["HTML", "JavaScript", "CSS", "Extension APIs"],
-      liveUrl:
-        "https://microsoftedge.microsoft.com/addons/detail/inscribe/gcobiohplbeljjficipnjpdbpkldkiih",
+      liveUrl: "https://inscribe-vibe.vercel.app/",
       githubUrl: "https://github.com/mofopeadegoke",
       details:
         "Inscribe is a powerful and lightweight browser extension that allows users to take quick, context-aware notes while browsing the web. Designed for productivity enthusiasts, students, and researchers, Inscribe helps users capture ideas, summarize content, and organize information without leaving the current tab. Inscribe enhances online productivity by reducing context switching between browser tabs and external note apps. It’s ideal for learners, content curators, and knowledge workers who need to capture and revisit thoughts quickly while browsing",
