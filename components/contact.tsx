@@ -17,22 +17,39 @@ export default function Contact() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleChange = (e) => {
+  interface InputChangeEvent
+    extends React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement> {}
+
+  const handleChange = (e: InputChangeEvent): void => {
     const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
+    setFormData((prev: ContactFormData) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = async (e) => {
+  interface ContactFormData {
+    name: string;
+    email: string;
+    subject: string;
+    message: string;
+  }
+
+  interface ToastOptions {
+    title: string;
+    description: string;
+  }
+
+  const handleSubmit = async (
+    e: React.FormEvent<HTMLFormElement>
+  ): Promise<void> => {
     e.preventDefault();
     setIsSubmitting(true);
 
     // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    await new Promise<void>((resolve) => setTimeout(resolve, 1500));
 
     toast({
       title: "Message sent!",
       description: "Thanks for reaching out. I'll get back to you soon.",
-    });
+    } as ToastOptions);
 
     setFormData({
       name: "",
@@ -84,7 +101,7 @@ export default function Contact() {
                     href="mailto:john.doe@example.com"
                     className="text-gray-400 hover:text-emerald-400 transition-colors"
                   >
-                    john.doe@example.com
+                    mofopeadegoke@gmail.com
                   </a>
                 </div>
               </div>
@@ -98,7 +115,7 @@ export default function Contact() {
                     href="tel:+1234567890"
                     className="text-gray-400 hover:text-emerald-400 transition-colors"
                   >
-                    +1 (234) 567-890
+                    +90 548 854 96 42
                   </a>
                 </div>
               </div>
@@ -108,7 +125,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="text-lg font-medium mb-1">Location</h4>
-                  <p className="text-gray-400">San Francisco, California</p>
+                  <p className="text-gray-400">Lefke, North Cyprus</p>
                 </div>
               </div>
             </div>

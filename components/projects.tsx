@@ -3,21 +3,35 @@
 import { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import cultureCapsule from "@/public/culCap.png";
+import fufuImg from "@/public/fufu.png";
+import organickImg from "@/public/organick.png";
 import { ExternalLink, Github, Maximize2, X } from "lucide-react";
 import "./project.css"; // Import your CSS file for custom styles
 
-export default function Projects() {
-  const [selectedProject, setSelectedProject] = useState(null);
+type Project = {
+  id: number;
+  title: string;
+  description: string;
+  image: any;
+  tags: string[];
+  liveUrl: string;
+  githubUrl: string;
+  details: string;
+};
 
-  const projects = [
+export default function Projects() {
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+
+  const projects: Project[] = [
     {
       id: 1,
       title: "Culture Capsule",
       description:
         "Culture Capsule is a digital platform designed to document and share the rich cultural heritage of Northern Cyprus. Built with Next.js and Tailwind CSS.",
-      image: "/placeholder.svg?height=600&width=800",
+      image: cultureCapsule,
       tags: ["Vite", "React", "Tailwind CSS", "Shadcn UI", "TypeScript"],
-      liveUrl: "https://example.com",
+      liveUrl: "https://culturecapsule.net/",
       githubUrl: "https://github.com/callmestiles/culture-capsule-frontend-fix",
       details:
         "This project was built to demonstrate my ability to create complex, interactive web applications. It includes features like product filtering, search functionality, user accounts and authentication, and a responsive design that works on all devices. The project was built using Next.js, Tailwind CSS, and Shadcn UI.",
@@ -27,7 +41,7 @@ export default function Projects() {
       title: "Fufu App",
       description:
         "The home page of job board application that allows users to search for jobs, save favorites, and apply directly through the platform. Built with React",
-      image: "/placeholder.svg?height=600&width=800",
+      image: fufuImg,
       tags: ["React", "Vite", "AOS"],
       liveUrl: "https://www.tryfufu.com/",
       githubUrl: "https://github.com/IndigoSoftwares21/fufu_app_waitlist",
@@ -39,7 +53,7 @@ export default function Projects() {
       title: "Organick",
       description:
         "Organick is a full-featured web application that connects local farmers directly with consumers, promoting access to fresh, organic produce while supporting sustainable agriculture.",
-      image: "/placeholder.svg?height=600&width=800",
+      image: organickImg,
       tags: ["React", "Node.js", "CSS", "JavaScript"],
       liveUrl: "https://tech-space-project-organik.vercel.app/",
       githubUrl: "https://github.com/mofopeadegoke/TechSpace-Project-Organik",
