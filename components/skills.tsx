@@ -16,7 +16,7 @@ export default function Skills() {
         { name: "JavaScript", level: 80 },
         { name: "Next.js", level: 80 },
         { name: "Three.js", level: 80 },
-        { name: "Bootstrap 5", level: 90 },
+        { name: "MUI", level: 80 },
       ],
     },
     {
