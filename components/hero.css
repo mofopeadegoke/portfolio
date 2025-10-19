@@ -12,7 +12,7 @@
     left: 4rem;
     width: 70%;
     height: 70%;
-    background-color:rgba(16, 185, 129, 0.5);
+    background-color:#10b98180;
     filter: blur(9rem);
     z-index: -1;
 }
