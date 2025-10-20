@@ -17,8 +17,8 @@
     z-index: -1;
 }
 #heroImgContainer {
-    width: 25rem;
-    height: 25rem;
+    width: 27rem;
+    height: 27rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -27,4 +27,11 @@
         height: 22rem;
     }
     
+}
+
+@media screen and (max-width: 1260px) {
+    #heroImgContainer {
+        width: 25rem;
+        height: 25rem;
+    } 
 }
