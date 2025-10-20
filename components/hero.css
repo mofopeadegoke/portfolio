@@ -20,3 +20,11 @@
     width: 25rem;
     height: 25rem;
 }
+
+@media screen and (max-width: 768px) {
+    #heroImgContainer {
+        width: 22rem;
+        height: 22rem;
+    }
+    
+}
